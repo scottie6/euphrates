@@ -23,6 +23,11 @@ module.exports = {
       }
     ]
   },
+ externals: {
+      oimo: 'OIMO', //or true
+      cannon: 'CANNON', //or true
+      earcut: 'EARCUT' //or true
+  },
   stats: {
     colors: true
   }
