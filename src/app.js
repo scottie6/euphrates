@@ -46,5 +46,3 @@ engine.runRenderLoop( () => {
 window.addEventListener('resize', () => {
   engine.resize()
 })
-    
-    
