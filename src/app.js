@@ -9,7 +9,6 @@ let createScene = () => {
   scene.gravity = new Babylon.Vector3(0,-9.81,0)
   scene.enablePhysics()
   scene.collisionsEnabled = true
-  
   //Camera
   let camera = new Babylon.FreeCamera('camera1', new BABYLON.Vector3(0,5,-10), scene)
   camera.setTarget(Babylon.Vector3.Zero())
@@ -17,7 +16,6 @@ let createScene = () => {
   camera.checkCollisions = true
   camera.ellipsoid = new Babylon.Vector3(1,1.5,1)
   camera.attachControl(canvas, true)
-  // Enable WASD keys
   camera.keysUp.push(87)
   camera.keysDown.push(83)
   camera.keysLeft.push(65)
@@ -31,7 +29,8 @@ let createScene = () => {
   sphere.checkCollisions = true 
   
   let ground = Babylon.Mesh.CreateGround('ground1', 6,6,2, scene, false)
-  
+  ground.checkCollisions = true
+
   return scene
 }
 
